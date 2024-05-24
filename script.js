@@ -1,10 +1,30 @@
-let blocks = 256;
+// Everything MUST happen inside the fuction. Otherwise, the script keeps going back to the original node to append the child, overwriting whatever it has already created. You cannot generate more than one additional div that way!
 
-const sketchPad = document.querySelector("#sketchPad");
+function getBlocks () {
+    var div = document.createElement("div");
+    document.getElementById("sketchPad").appendChild(div);
+}
 
-const div = document.createElement("div");
-div.style.background = "blue";
-div.style.height = "10px";
-div.style.width = "10px";
+getBlocks();
+getBlocks();
+getBlocks();
+getBlocks();
+getBlocks();
+getBlocks();
 
-sketchPad.appendChild(div);
+
+
+
+
+
+
+
+function generateGrid() {
+    var div = document.createElement('div');
+    document.getElementById("grid").appendChild(div);
+   }
+
+   generateGrid();
+   generateGrid();
+   generateGrid();
+   generateGrid();
