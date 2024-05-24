@@ -26,3 +26,7 @@ div {
     background: blue;
     aspect-ratio: 1/1;
 }
+
+div:hover {
+    background-color: gold;
+}
