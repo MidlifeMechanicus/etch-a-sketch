@@ -5,12 +5,23 @@
     box-sizing: border-box;
 }
 
-#sketchPad {
+body {
     height: 100vh;
+}
+
+#sketchPad {
+    height: 90vw;
+    width: 90vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 }
 
 div {
     background: blue;
-    height: 10px;
+    /* height: 10px; */
     width: 10px;
+    aspect-ratio: 1/1;
+    /* flex: 1; */
 }
