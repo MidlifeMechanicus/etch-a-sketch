@@ -1,0 +1,1 @@
+This Etch-a-Scetch project is for the Odin Project Foundations course.
