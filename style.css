@@ -7,6 +7,10 @@
 
 body {
     height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 #sketchPad {
@@ -20,8 +24,5 @@ body {
 
 div {
     background: blue;
-    /* height: 10px; */
-    width: 10px;
     aspect-ratio: 1/1;
-    /* flex: 1; */
 }
