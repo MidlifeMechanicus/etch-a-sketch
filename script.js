@@ -2,7 +2,6 @@
 
 function getBlocks (blocksPerSide) {
     let blockNumber = blocksPerSide * blocksPerSide;
-    // let blockHeight = 
     
     for (let i = 0; i < blockNumber; i++) {
         let div = document.createElement("div");
@@ -11,9 +10,26 @@ function getBlocks (blocksPerSide) {
         document.getElementById("sketchPad").appendChild(div);
     }
 
+    // let block = document.getElementsByClassName("block");
+    // block.addEventListener("mouseover", () => {
+        // block.style.backgroundColor = "green";
+    // })
+
 }
 
 getBlocks(100);
+
+function changeBlockColor () {
+    let block = document.getElementsByClassName("block");
+    for (let i = 0; i < block.length; i++) {
+        block[i].addEventListener("mouseover", () => {
+            block[i].style.backgroundColor = "pink";
+        })
+    }
+};
+
+changeBlockColor();
+
 
 // function changeColor () {
     // const head = document.querySelector(".test");
@@ -22,10 +38,18 @@ getBlocks(100);
 // 
 // changeColor()
 
-// const head = document.querySelector(".test");
-// head.style.backgroundColor = "pink";
+const head = document.querySelector(".test");
+head.addEventListener("mouseover", () => {
+    head.style.backgroundColor = "pink";
+    // alert("working!");
+});
 
-const head = document.getElementsByClassName("test");
-head[0].style.backgroundColor = "pink";
+
+
+
+
+
+// const head = document.getElementsByClassName("test");
+// head[0].style.backgroundColor = "pink";
 
 // Grabbing multiple elements at once returns a NodeList, an Array-like object that needs to be handled a little differently from single elements.
