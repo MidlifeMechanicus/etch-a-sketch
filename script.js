@@ -10,25 +10,24 @@ function getBlocks (blocksPerSide) {
         document.getElementById("sketchPad").appendChild(div);
     }
 
-    // let block = document.getElementsByClassName("block");
-    // block.addEventListener("mouseover", () => {
-        // block.style.backgroundColor = "green";
-    // })
+    function changeBlockColor () {
+        let block = document.getElementsByClassName("block");
+        for (let i = 0; i < block.length; i++) {
+            block[i].addEventListener("mouseover", () => {
+                block[i].style.backgroundColor = "gold";
+            })
+        }
+    };
+
+    changeBlockColor();
 
 }
 
 getBlocks(100);
 
-function changeBlockColor () {
-    let block = document.getElementsByClassName("block");
-    for (let i = 0; i < block.length; i++) {
-        block[i].addEventListener("mouseover", () => {
-            block[i].style.backgroundColor = "pink";
-        })
-    }
-};
 
-changeBlockColor();
+
+// changeBlockColor();
 
 
 // function changeColor () {
