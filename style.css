@@ -5,12 +5,6 @@
     box-sizing: border-box;
 }
 
-header {
-    height: 10px;
-    width: 100%;
-    background: orange;
-}
-
 body {
     height: 100vh;
     display: flex;
@@ -31,12 +25,4 @@ body {
 div {
     background: blue;
     aspect-ratio: 1/1;
-}
-
-.block:hover {
-    background-color: gold;
-}
-
-.mouseOver {
-    background: green;
 }

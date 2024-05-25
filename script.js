@@ -12,6 +12,9 @@ function getBlocks (blocksPerSide) {
 
     function changeBlockColor () {
         let block = document.getElementsByClassName("block");
+
+// Because block captures more than one element, it is a nodeList, an array-like object. Each element occupies a separate entry on the list, so we need a for loop to add our eventListener to each entry.
+
         for (let i = 0; i < block.length; i++) {
             block[i].addEventListener("mouseover", () => {
                 block[i].style.backgroundColor = "gold";
@@ -25,30 +28,3 @@ function getBlocks (blocksPerSide) {
 
 getBlocks(100);
 
-
-
-// changeBlockColor();
-
-
-// function changeColor () {
-    // const head = document.querySelector(".test");
-    // head.style.backgroundColor = "pink";
-// }
-// 
-// changeColor()
-
-const head = document.querySelector(".test");
-head.addEventListener("mouseover", () => {
-    head.style.backgroundColor = "pink";
-    // alert("working!");
-});
-
-
-
-
-
-
-// const head = document.getElementsByClassName("test");
-// head[0].style.backgroundColor = "pink";
-
-// Grabbing multiple elements at once returns a NodeList, an Array-like object that needs to be handled a little differently from single elements.
