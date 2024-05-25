@@ -1,3 +1,25 @@
+const resetButton = document.getElementById("reset");
+
+resetButton.addEventListener("click", () => {
+    // We cannot remove elements in a NodeList by targeting them directly with .remove(). We must therefore target the containing parent element and use .removeChild. In general it is computationally faster to remove last element rather than first element.
+
+    let cleanPad = document.getElementById("sketchPad");
+
+    while (cleanPad.firstChild) {
+        cleanPad.removeChild(cleanPad.lastChild)
+    }
+
+    // This could also have been done by deleting the html. However, this would not work where you wanted to preserve some elements and not others. See example.
+
+    // doFoo.onclick = () => {
+        // const myNode = document.getElementById("foo");
+        // myNode.innerHTML = '';
+    //   }
+
+    getBlocks(10);
+})
+
+
 // Everything MUST happen inside the fuction. Otherwise, the script keeps going back to the original node to append the child, overwriting whatever it has already created. You cannot generate more than one additional div that way!
 
 function getBlocks (blocksPerSide) {
@@ -26,5 +48,4 @@ function getBlocks (blocksPerSide) {
 
 }
 
-getBlocks(100);
-
+getBlocks(16);
