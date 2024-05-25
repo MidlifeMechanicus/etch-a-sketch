@@ -1,22 +1,30 @@
 const resetButton = document.getElementById("reset");
 
 resetButton.addEventListener("click", () => {
-    // We cannot remove elements in a NodeList by targeting them directly with .remove(). We must therefore target the containing parent element and use .removeChild. In general it is computationally faster to remove last element rather than first element.
 
-    let cleanPad = document.getElementById("sketchPad");
+    let blockRequest = parseInt(prompt("How many blocks do you want on each side?", "Please enter a numerical value between 1 and 100."));
 
-    while (cleanPad.firstChild) {
-        cleanPad.removeChild(cleanPad.lastChild)
+    if (blockRequest > 0 && blockRequest < 101) {
+    
+        // We cannot remove elements in a NodeList by targeting them directly with .remove(). We must therefore target the containing parent element and use .removeChild. In general it is computationally faster to remove last element rather than first element.
+
+        let cleanPad = document.getElementById("sketchPad");
+
+        while (cleanPad.firstChild) {
+            cleanPad.removeChild(cleanPad.lastChild)
+        }
+
+        // This could also have been done by deleting the html. However, this would not work where you wanted to preserve some elements and not others. See example.
+
+        // doFoo.onclick = () => {
+            // const myNode = document.getElementById("foo");
+            // myNode.innerHTML = '';
+        //   }
+
+        getBlocks(blockRequest);
+    } else {
+        alert("That is not a valid entry.")
     }
-
-    // This could also have been done by deleting the html. However, this would not work where you wanted to preserve some elements and not others. See example.
-
-    // doFoo.onclick = () => {
-        // const myNode = document.getElementById("foo");
-        // myNode.innerHTML = '';
-    //   }
-
-    getBlocks(10);
 })
 
 
